@@ -1,0 +1,29 @@
+body {
+  font-size: 12pt;
+  background-color: rgba(240, 240, 223, 0.884); }
+  body main .head-section {
+    text-align: left; }
+    body main .head-section h1 {
+      font-size: 6rem;
+      color: #ce34ce; }
+  body main .top-smiley .static-smiley {
+    text-align: center; }
+    body main .top-smiley .static-smiley img {
+      width: 20%;
+      position: absolute; }
+  body main .top-images {
+    text-align: center; }
+    body main .top-images img {
+      height: 80%; }
+  body main .test {
+    border-left: 10px solid black;
+    padding: 1rem;
+    position: absolute;
+    height: 30%;
+    left: 50px; }
+  body main .more {
+    border-left: 10px solid black;
+    padding: 1rem;
+    position: absolute;
+    height: 50%;
+    left: 500px; }
