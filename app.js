@@ -1,18 +1,17 @@
 window.onload = function() { 
 
-    var elem = document.getElementById("smiley");
-    var useMe = ["right", "down", "left", "up"]; 
-    var i = 0;
-
+    
+    let position = ["right", "down", "left", "up"]; 
     let scrollSmiley = document.getElementById('static-sm');
-    scrollSmiley.addEventListener("wheel", ()=> { 
-        setInterval(initElemAnim, 4000);
-    });  
 
-    function initElemAnim() {
-        if(i==3)i=0;
-        elem.className = useMe[i++];
-    }
+    scrollSmiley.addEventListener("click", ()=> { 
+
+        var smiley = document.getElementById("smiley");
+        for(let i=0; i<3; i++) {
+            smiley.className = position[i];
+        }
+        
+    });   
 }
 
 

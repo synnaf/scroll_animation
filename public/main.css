@@ -11,6 +11,14 @@ body {
     body main .top-smiley .static-smiley img {
       width: 20%;
       position: absolute; }
+    body main .top-smiley .static-smiley .right {
+      transform: rotate(45deg); }
+    body main .top-smiley .static-smiley .down {
+      transform: rotate(90deg); }
+    body main .top-smiley .static-smiley .left {
+      transform: rotate(180deg); }
+    body main .top-smiley .static-smiley .up {
+      transform: rotate(300deg); }
   body main .top-images {
     text-align: center; }
     body main .top-images img {
