@@ -1,19 +1,34 @@
 window.onload = function() { 
 
-    
-    let position = ["right", "down", "left", "up"]; 
-    let scrollSmiley = document.getElementById('static-sm');
+//hämta bilden
+let smiley = document.getElementById("smiley"); 
+let rotateD = 0; 
 
-    scrollSmiley.addEventListener("click", ()=> { 
+function doSomething() {
 
-        var smiley = document.getElementById("smiley");
-        for(let i=0; i<3; i++) {
-            smiley.className = position[i];
-        }
-        
-    });   
+var spinningStr = "rotate(" + rotateD.toString() + "deg)"; 
+    smiley.style.transform = spinningStr; 
+    // smiley.style.left = rotateD; 
+    rotateD++; 
+
+    //any sort of animation you would like 
+    requestAnimationFrame(doSomething); 
 }
 
+doSomething(); 
+
+
+}
+
+
+
+// om vi deklarerar en variabel utanför, kan vi sedan ändra värdet på den innuti funktionen 
+//här deklarewra vi en variabel som vi ger värdet 0, sedan ökr vi den i funktionen
+
+//vi skapar en funktion, innuti den kallar vi rAF, som sedan körs rekursivt
+//det jag vill göra innuti min funktion är att 
+//1) hämta bilden
+//2) rotera den en pixel ++ 
 
 
 
