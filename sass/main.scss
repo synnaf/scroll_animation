@@ -1,10 +1,13 @@
 body { 
     font-size:12pt;
     background-color: rgba(240, 240, 223, 0.884);
+    height:2000px;
     main {
         .head-section {
             text-align:left;
-            h1 { 
+            h1, h2 { 
+            font-family: 'Fascinate', cursive;
+            // font-family: 'Bungee Outline', cursive;
             font-size:6rem;
             color:rgb(206, 52, 206); 
             } 
@@ -12,44 +15,25 @@ body {
         .top-smiley {
             .static-smiley {
                text-align:center;
+               position: fixed;
+               top: 10%;
+               left: 50%;
                 img {
-                    width:20%;
-                    position: absolute; 
-                }
-                .right{
-                    transform: rotate(45deg);
-                }
-                .down{
-                    transform: rotate(90deg);
-                }
-                .left{
-                    transform: rotate(180deg); 
-                }
-                .up{
-                    transform: rotate(300deg); 
+                    width:80%;
                 }
             }
         }
         .top-images {
             text-align:center;
+            border-left:10px solid black;
+            padding:1rem;
+            margin-left:50px; 
             img {
-                height:80%;
+                width:90%;
             }
         }
-            .test { 
-                border-left:10px solid black;
-                padding:1rem;
-                position: absolute; 
-                height:30%; 
-                left:50px; 
-            } 
-            .more { 
-                border-left:10px solid black;
-                padding:1rem;
-                position: absolute; 
-                height:50%; 
-                left:500px;  
-            } 
         
     }
 } 
+
+
