@@ -1,24 +1,55 @@
 window.onload = function() { 
 
-//hämta bilden
+//hämta bilden + utgå ifrån position 0 
 let smiley = document.getElementById("smiley"); 
 let rotateD = 0; 
 
-function doSomething() {
+//reglera så att rotationen sker i samband med scroll + flytt av positionY
+let scroll_request = false; 
+let last_known_scroll_position = window.scrollY;
 
-var spinningStr = "rotate(" + rotateD.toString() + "deg)"; 
+this.addEventListener("scroll", function doSomething() {
+    
+    this.console.log(scroll_request)
+    let spinningStr = "rotate(" + rotateD + "deg)"; 
     smiley.style.transform = spinningStr; 
-    // smiley.style.left = rotateD; 
     rotateD++; 
 
-    //any sort of animation you would like 
-    requestAnimationFrame(doSomething); 
+
+    if (!scroll_request) {
+
+        requestAnimationFrame(function() {
+            doSomething(last_known_scroll_position);
+            scroll_request = false;
+        });
+        scroll_request = true;
+      }
+
+
+    // //any sort of animation you would like 
+    // requestAnimationFrame(doSomething); 
+
+}); 
+
+
 }
 
-doSomething(); 
+
+    // function doSomething() {
+        //     var spinningStr = "rotate(" + rotateD.toString() + "deg)"; 
+        //     smiley.style.transform = spinningStr; 
+        //     // smiley.style.left = rotateD; 
+        //     rotateD++; 
+
+        //     //any sort of animation you would like 
+        //     requestAnimationFrame(doSomething); 
+    // }
+    // doSomething(); 
 
 
-}
+
+
+
 
 
 
